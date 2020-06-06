@@ -1,12 +1,19 @@
 import React , {useReducer} from 'react'
 
-const init = 0
+const init = {
+  first: 0,
+  second: 0,
+}
 const reducer = (state,action) => {
-  switch(action){
-    case 'increment':
-      return state + 1
-    case 'decrement':
-      return state - 1
+  switch(action.type){
+    case 'increment1':
+      return {...state,first: state.first + action.value}
+    case 'decrement1':
+      return {...state,first: state.first - action.value}
+    case 'increment2':
+      return {...state,second: state.second + action.value}
+    case 'decrement2':
+      return {...state,second: state.second - action.value}
     case 'reset':
       return init
     default:
@@ -17,10 +24,13 @@ function CounterReducer(){
   const [count, dispatch] = useReducer(reducer, init)
   return (
     <div>
-      <h1>カウント:{count}</h1>
-      <button onClick={() => dispatch('increment')}>プラス</button>
-      <button onClick={() => dispatch('decrement')}>マイナス</button>
-      <button onClick={() => dispatch('reset')}>リセット</button>
+      <h1>カウント1:{count.first}</h1>
+      <h1>カウント2:{count.second}</h1>
+      <button onClick={() => dispatch({type:'increment1',value:1})}>プラス</button>
+      <button onClick={() => dispatch({type:'decrement1',value:1})}>マイナス</button>
+      <button onClick={() => dispatch({type:'increment2',value:5})}>プラス5</button>
+      <button onClick={() => dispatch({type:'decrement2',value:5})}>マイナス5</button>
+      <button onClick={() => dispatch({type:'reset'})}>リセット</button>
     </div>
   )
 }
