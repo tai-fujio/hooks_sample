@@ -7,9 +7,9 @@ import ItemHook from './components/ItemHook';
 function App() {
   return (
     <div className="App">
-      {/*<CounterHooks /> */}
+      <CounterHooks />
       {/* <FormHook /> */}
-      <ItemHook />
+      {/* <ItemHook /> */}
     </div>
   );
 }

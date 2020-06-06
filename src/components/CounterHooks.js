@@ -1,7 +1,11 @@
-import React, {useState} from 'react'
+import React, {useState,useEffect} from 'react'
 
 function CounterHooks() {
   const[count, setCount] = useState(0)
+  const[name, setName] = useState('')
+  useEffect(()=> {
+    document.title = `クリック数: ${count}`
+  },[count])
   const incrementCount = () => {
     setCount(prevCount => prevCount + 1)
   }
@@ -10,9 +14,18 @@ function CounterHooks() {
   }
   return (
     <div>
-      <h1>{count}</h1>
+      <h1>クリック数：{count}</h1>
+      <p>名前:{name}</p>
       <button onClick={incrementCount}>+1</button>
       <button onClick={incrementCountTen}>+10</button>
+      <button onClick={()=>{
+        setCount(count + 1)}
+      }>クリックカウント</button>
+      <input
+      type = "text"
+      value = {name}
+      onChange = {e=> setName(e.target.value)}
+      ></input>
     </div>
   )
 }
