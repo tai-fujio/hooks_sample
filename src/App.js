@@ -9,6 +9,7 @@ import MouseEventEffect from './components/MouseEventEffect';
 import DataFetch from './components/DataFetch';
 import DataFetchId from './components/DataFetchId';
 import ComponentC from './components/ComponentC';
+import CounterReducer from './components/CounterReducer';
 export const UserInfo = createContext({});
 export const LanguageInfo = createContext();
 function App() {
@@ -27,7 +28,8 @@ function App() {
       <CounterHooks />
       {/* <FormHook /> */}
       {/* <ItemHook /> */}
-      <ComponentC />
+      <CounterReducer/>
+
     </div>
   );
 }
