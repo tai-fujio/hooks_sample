@@ -16,10 +16,8 @@ function MouseEventEffect() {
   },[])
   return(
     <div>
-      <ul>
-        <li>X座標 {x}</li>
-        <li>Y座標 {y}</li>
-      </ul>
+        <p>X座標 {x}</p>
+        <p>Y座標 {y}</p>
     </div>
   )
 }
