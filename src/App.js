@@ -17,6 +17,9 @@ import axios from 'axios'
 import WrapComponent from './components/WrapComponent';
 import Check from './components/Check'
 import FocusInput from './components/FocusInput'
+import DocumentTitleChange from './components/DocumentTitleChange';
+import DocumentTitleChangeNew from './components/DocumentTitleChangeNew';
+import Form from './components/Form'
 export const UserInfo = createContext({});
 export const LanguageInfo = createContext();
 export const StatusContext = createContext({});
@@ -100,6 +103,9 @@ function App() {
       <WrapComponent />
       <Check />
       <FocusInput />
+      <DocumentTitleChange />
+      <DocumentTitleChangeNew />
+      <Form />
     </div>
   );
 }
