@@ -14,6 +14,7 @@ import ComponentX from './components/ComponentX';
 import ComponentY from './components/ComponentY';
 import ComponentZ from './components/ComponentZ';
 import axios from 'axios'
+import WrapComponent from './components/WrapComponent';
 export const UserInfo = createContext({});
 export const LanguageInfo = createContext();
 export const StatusContext = createContext({});
@@ -94,6 +95,7 @@ function App() {
       </StatusContext.Provider>
       <h1>{apiState.loading? 'Now Loading...':apiState.post.body}</h1>
       <h2>{apiState.error?apiState.error:'Nothing Error'}</h2>
+      <WrapComponent />
     </div>
   );
 }
