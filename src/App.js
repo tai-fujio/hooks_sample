@@ -15,6 +15,7 @@ import ComponentY from './components/ComponentY';
 import ComponentZ from './components/ComponentZ';
 import axios from 'axios'
 import WrapComponent from './components/WrapComponent';
+import Check from './components/Check'
 export const UserInfo = createContext({});
 export const LanguageInfo = createContext();
 export const StatusContext = createContext({});
@@ -96,6 +97,7 @@ function App() {
       <h1>{apiState.loading? 'Now Loading...':apiState.post.body}</h1>
       <h2>{apiState.error?apiState.error:'Nothing Error'}</h2>
       <WrapComponent />
+      <Check />
     </div>
   );
 }
