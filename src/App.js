@@ -16,6 +16,7 @@ import ComponentZ from './components/ComponentZ';
 import axios from 'axios'
 import WrapComponent from './components/WrapComponent';
 import Check from './components/Check'
+import FocusInput from './components/FocusInput'
 export const UserInfo = createContext({});
 export const LanguageInfo = createContext();
 export const StatusContext = createContext({});
@@ -98,6 +99,7 @@ function App() {
       <h2>{apiState.error?apiState.error:'Nothing Error'}</h2>
       <WrapComponent />
       <Check />
+      <FocusInput />
     </div>
   );
 }
