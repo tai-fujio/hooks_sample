@@ -1,9 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState } from 'react'
 import Todo from "./Todo"
 import TodoForm from "./TodoForm"
 
 function Mytodo() {
-  // const [list, setList] = useState('');
   const [lists, setLists] = useState([
     { text: "This is a sample text.", isDone: false },
     { text: "This is a sample2 text.", isDone: true },
@@ -37,14 +36,18 @@ function Mytodo() {
 
   return (
     <div className="card-content">
+      <button className="button_todo3">MyTodoコンポーネント</button>
       {lists.map((element, index) => (
-        <Todo
-          index={index}
-          todo={element}
-          complete={complete}
-          clear={clear}
-          erase={erase}
-        />
+        <div>
+          <button className="button_todo1">Todoコンポーネント</button>
+          <Todo
+            index={index}
+            todo={element}
+            complete={complete}
+            clear={clear}
+            erase={erase}
+          />
+        </div>
       ))}
       <TodoForm addTodo={addTodo} />
     </div>

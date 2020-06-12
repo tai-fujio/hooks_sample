@@ -50,7 +50,7 @@
   border-width: thick;
   background: #e8e8e8;
   border-radius: 4px;
-  padding: 5px;
+  padding: 20px;
 }
 
 .todo {
@@ -67,6 +67,43 @@
   justify-content: space-between;
 }
 
+.button_todo0 {
+  background-color: #5f122f;
+  border: 1px solid #866ec7;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+}
+.button_todo1 {
+  background-color: #8f71ff;
+  border: 1px solid #866ec7;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.button_todo2 {
+  background-color: #df71aa;
+  border: 1px solid #866ec7;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+}
+.button_todo3 {
+  background-color: #da114f;
+  border: 1px solid #866ec7;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+}
 .time{
   display: flex;
   justify-content: space-between;

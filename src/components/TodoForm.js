@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState } from 'react'
 
 function TodoForm({ addTodo }) {
 
@@ -14,19 +14,22 @@ function TodoForm({ addTodo }) {
     setList("");
   };
   return (
-    <form action="" onSubmit={submitForm} className="todo">
-      <input
-        type="text"
-        className="input"
-        onChange={inputForm}
-        value={list}
-        placeholder="タスクを入力してください"
-        style={{ width: '80%', height: '30px', fontsize: '28px', fontSize: 'inherit' }}
-      >
-      </input>
-      <button
-      >追加</button>
-    </form >
+    <div>
+      <button className="button_todo2">TodoFormコンポーネント</button>
+      <form action="" onSubmit={submitForm} className="todo">
+        <input
+          type="text"
+          className="input"
+          onChange={inputForm}
+          value={list}
+          placeholder="タスクを入力してください"
+          style={{ width: '80%', height: '30px', fontsize: '28px', fontSize: 'inherit' }}
+        >
+        </input>
+        <button
+        >追加</button>
+      </form >
+    </div>
   )
 }
 

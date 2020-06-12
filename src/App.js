@@ -109,6 +109,7 @@ function App() {
       <DocumentTitleChangeNew />
       <Form />
       <div className="app">
+        <button className="button_todo0">Appコンポーネント</button>
         <div className="time">
           <h1>MY TODO LIST</h1>
           <Time />
