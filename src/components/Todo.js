@@ -1,11 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react'
 
-function Todo({ index, todo, complete, clear }) {
+function Todo({ index, todo, complete, clear, erase }) {
 
   return (
     <div
       className="todo"
     >
+      <button onClick={() => erase(index)}>✖</button>
       <div style={{ textDecoration: todo.isDone ? "line-through" : "" }}>
         {todo.text}
       </div>

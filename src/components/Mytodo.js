@@ -16,7 +16,12 @@ function Mytodo() {
 
     setLists(newlists);
 
-  }
+  };
+  const erase = index => {
+    const newlists = [...lists];
+    newlists.splice(index, 1);
+    setLists(newlists);
+  };
 
   const complete = index => {
     const newlists = [...lists];
@@ -38,6 +43,7 @@ function Mytodo() {
           todo={element}
           complete={complete}
           clear={clear}
+          erase={erase}
         />
       ))}
       <TodoForm addTodo={addTodo} />

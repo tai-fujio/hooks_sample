@@ -21,6 +21,7 @@ import DocumentTitleChange from './components/DocumentTitleChange';
 import DocumentTitleChangeNew from './components/DocumentTitleChangeNew';
 import Form from './components/Form'
 import Mytodo from './components/Mytodo'
+import Time from './components/Time'
 export const UserInfo = createContext({});
 export const LanguageInfo = createContext();
 export const StatusContext = createContext({});
@@ -108,6 +109,10 @@ function App() {
       <DocumentTitleChangeNew />
       <Form />
       <div className="app">
+        <div className="time">
+          <h1>MY TODO LIST</h1>
+          <Time />
+        </div>
         <div className="todo-list">
           <Mytodo />
         </div>

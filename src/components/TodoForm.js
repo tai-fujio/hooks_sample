@@ -19,11 +19,14 @@ function TodoForm({ addTodo }) {
         type="text"
         className="input"
         onChange={inputForm}
-        value={list}>
+        value={list}
+        placeholder="タスクを入力してください"
+        style={{ width: '80%', height: '30px', fontsize: '28px', fontSize: 'inherit' }}
+      >
       </input>
       <button
       >追加</button>
-    </form>
+    </form >
   )
 }
 
